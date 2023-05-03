@@ -1,0 +1,95 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Times New Roman', Times, serif;
+
+}
+header{
+    background-color: salmon;
+}
+.hero{
+    height:15vh;
+    width:100%;
+    
+}
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:30px;
+    padding-left:10%;
+    padding-right: 10%;
+}
+.logo{
+    color:black;
+    font-size:40px;
+}
+nav ul li{
+    list-style-type:none;
+    display:inline-block;
+    padding: 10px 20px;
+
+}
+nav ul li a{
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+}
+nav ul li a:hover{
+    color:white;
+    transition:.3s;
+}    
+body{
+    background:sandybrown;
+    font-size:24px;
+    
+}
+.main-container{
+    width:95%;
+    margin:auto;
+}
+.container1{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:30px;
+    
+}
+.container2{
+    display:flex;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+    margin-top:20px;
+    margin-left:5%;
+}
+.container3{
+    display:none;
+    position:absolute;
+    top: 26%;
+    left: 40%;
+
+}
+textarea{
+    box-shadow:10px 10px 24px 0px black;
+    outline:none;
+    border:none;
+    width:275px;
+    height:275px;
+    padding:40px 25px 25px 25px;
+
+}
+svg{
+    color:gray;
+
+}
+#check-icon{
+    position:absolute;
+    right:17%;
+    top:4%;
+}
+#x-icon{
+    position:absolute;
+    right:5%;
+    top:4%;
+}
