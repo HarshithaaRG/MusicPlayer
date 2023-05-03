@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="icon" href="check.png"  type="image/x-icon">
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .heading{
+            font-size:50px;
+            text-align:center;
+            margin-left:-50px;
+            /*animation: glow 1s ease-in-out infinite alternate;*/           
+            
+        }
+        /*@keyframes glow{
+            from{
+                text-shadow: 0 0 10px red,0 0 20px red, 0 0 30px #1e79c2,0 0 40px #1e79c2, 0 0 50px #1e79c2, 0 0 60px #1e79c2, 0 0 70px #1e79c2;
+
+            }
+            to{
+                text-shadow: 0 0 20px red, 0 0 30px #ff4da6,0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6,0 0 80px #ff4da6;
+            }
+        }
+        */
+        .logo{
+             font-size:55px;
+             font-style:oblique;
+             color:black;
+             text-align:center;
+             margin-left:-300px;
+             animation: glow 1s ease-in-out infinite alternate;
+ 
+             
+         }
+         @keyframes glow{
+             from{
+                 text-shadow: 0 0 10px rgb(106, 236, 14),0 0 20px rgb(8, 231, 41), 0 0 30px #1e79c2,0 0 40px #1e79c2, 0 0 50px #1e79c2, 0 0 60px #1e79c2, 0 0 70px #1e79c2;
+ 
+             }
+             to{
+                 text-shadow: 0 0 20px rgb(13, 223, 13), 0 0 30px #e64308,0 0 40px #ee340a, 0 0 50px #ea3706, 0 0 60px #f32708, 0 0 70px #e81e07,0 0 80px #ff4da6;
+             }
+         }
+
+    </style>
+
+</head>
+<body>
+    <header class="hero">
+        <nav>
+            <img src="check.png" width="45" style="margin-left:-100px;">
+            <h2 class='logo'>TIMEZY</h2>
+            <ul>
+                <li style="font-size:25px; font-style:oblique;"><a href='todolist.html'>To-do list</a></li>
+                <li style="font-size:25px; font-style:oblique;"><a href='stopwatch.html'>Stopwatch</a></li>
+                <li style="font-size:25px;font-style:oblique;"><a href='notes.html'>Sticky notes</a></li>
+                <li style="font-size:25px; font-style:oblique;"><a href='alarm.html'>Alarm</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    
+    <main class="app">
+        <h1 class="heading">To-do List</h1>
+        <br>
+        <div class="input-header">
+            <h1 ><span id='date'></span></h1>
+            
+            <div class="to-do-input">
+                <input type="text" id="item" placeholder="Add your next task!"><button id="enter">Enter</button>
+                
+            </div>
+        </div>
+        <br><br>
+        <div class="to-do-list"></div>
+    </main>
+    <script src ='todo.js'></script>
+    
+    
+</body>
+</html>
