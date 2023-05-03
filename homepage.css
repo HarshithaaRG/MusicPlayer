@@ -1,0 +1,49 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:'Times New Roman', Times, serif;
+
+}
+header{
+    background-color: salmon;
+}
+body{
+    background-color: rgb(219, 216, 216);
+}
+.hero{
+    height:15vh;
+    width:100%;
+    
+}
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:30px;
+    padding-left:10%;
+    padding-right: 10%;
+}
+.logo{
+    color:black;
+    font-size:40px;
+}
+nav ul li{
+    list-style-type:none;
+    display:inline-block;
+    padding: 10px 20px;
+
+}
+nav ul li a{
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+}
+nav ul li a:hover{
+    color:white;
+    transition:.3s;
+}
+footer{
+    margin-top:150px;
+    margin-left:330px;
+}
