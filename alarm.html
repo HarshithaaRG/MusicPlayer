@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Digital Clock and Alarm</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="icon" href="clock.png"  type="image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        background-color: #4c444b;
+      }
+      header{
+        background-color: salmon;
+      }
+      .hero{
+        height:15vh;
+        width:100%;
+    
+      }
+      nav{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding-top:-30px;
+        padding-left:10%;
+        padding-right: 10%;
+      }
+      .logo{
+             font-size:45px;
+             font-style:oblique;
+             color:black;
+             text-align:center;
+             margin-left:-300px;
+             padding-top:-30px;
+             animation: glow 1s ease-in-out infinite alternate;
+ 
+             
+      }
+         @keyframes glow{
+             from{
+                 text-shadow: 0 0 10px rgb(106, 236, 14),0 0 20px rgb(8, 231, 41), 0 0 30px #1e79c2,0 0 40px #1e79c2, 0 0 50px #1e79c2, 0 0 60px #1e79c2, 0 0 70px #1e79c2;
+ 
+             }
+             to{
+                 text-shadow: 0 0 20px rgb(13, 223, 13), 0 0 30px #e64308,0 0 40px #ee340a, 0 0 50px #ea3706, 0 0 60px #f32708, 0 0 70px #e81e07,0 0 80px #ff4da6;
+             }
+         }
+      nav ul li{
+        list-style-type:none;
+        display:inline-block;
+        padding: 10px 20px;
+
+      }
+      nav ul li a{
+        color:black;
+        text-decoration:none;
+        font-weight:bold;
+      }
+      nav ul li a:hover{
+        color:white;
+        transition:.3s;
+      }
+
+      .container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #clock {
+        font-family: "Orbitron", sans-serif;
+        font-size: 100px;
+        
+        background-image: linear-gradient(
+          180deg,
+          rgb(243 207 30) 0%,
+          rgb(183 172 39) 50%,
+          rgb(120 118 40) 100%
+        );
+
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+      }
+
+      input {
+        border: 2px solid #f0f0f0;
+        border-radius: 4px;
+        display: block;
+        font-size: 14px;
+        padding: 10px 15px;
+      }
+
+      .controls {
+        margin-top: 16px;
+      }
+
+      .button {
+        font-weight: bold;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        padding: 8px 20px;
+        margin-left: 4px;
+        
+        cursor: pointer;
+        font-size: 15px;
+      }
+
+      .set-alarm {
+        background-color: green;
+      }
+
+      .clear-alarm {
+        background-color: #ff3860;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <nav>
+          <img src="check.png" width="45" style="margin-left:-100px;">
+          <h2 class='logo'>TIMEZY</h2>
+          <ul>
+              <li style="font-size:25px; font-style:oblique;"><a href='todolist.html'>To-do list</a></li>
+              <li style="font-size:25px; font-style:oblique;"><a href='stopwatch.html'>Stopwatch</a></li>
+              <li style="font-size:25px;font-style:oblique;"><a href='notes.html'>Sticky notes</a></li>
+              <li style="font-size:25px; font-style:oblique;"><a href='alarm.html'>Alarm</a></li>
+          </ul>
+          
+      </nav>
+  </header>
+    
+    <!--<header>-->
+        <h1 style="text-align:center;color:white;font-size:60px;margin-bottom:-50px;">Alarm</h1>
+    <!--</header>-->
+    <div class="container">
+      <div id="clock"></div>
+      <input
+        onchange="setAlarmTime(this.value)"
+        name="alarmTime"
+        type="datetime-local"
+      />
+      <div class="controls">
+        <button onclick="setAlarm()" class="button set-alarm">Set alarm</button>
+        <button onclick="clearAlarm()" class="button clear-alarm">
+          Clear alarm
+        </button>
+      </div>
+    </div>
+    <script src="alarm.js"></script>
+  </body>
+</html>
